@@ -46,6 +46,41 @@ Bridge mode and Repeater mode are two of the various toplogies in Wi-Fi Networks
 
 ### Q7. Configure your modem/hotspot to operate only in 2.4Ghz and connect your laptop/Wi-Fi device, and capture the capability/properties in your Wi-Fi device. Repeat the same in 5Ghz and tabulate all the differences you observed during this.
 
-### Q8. What is the difference between IEEE and WFA
-### Q9. List down the type of Wi-Fi internet connectivity backhaul, share your home/college's wireless internet connectivity backhaul name and its properties
+The frequency range of WLAN can be modified by logging into the router's portal at `192.168.1.1`. In the Networks tab, we can find the frequency ranges 2.4 GHz and 5 GHz, their selection can be modified by enabling/disabling the checkbox.
+
+![image](https://github.com/user-attachments/assets/a335dd65-1777-49c0-9dc7-89d2403497aa)
+
+The main difference would be the speed of data which might be higher in 5 GHz and slower in 2.4 GHz. But 2.4 GHz would provide a larger range than 5 GHz.
+
+### Q8. What is the difference between IEEE and WFA.
+
+|  IEEE |  WFA  |
+| :----: | :---: |
+| Stands for Institute of Electrical and Electronics Engineers | Stands for Wi-Fi Alliance |
+| Develops and publishes technical standards in various fields | Promotes and certifies products that adhere to the IEEE 802.11 standards, ensuring interoperability in Wi-Fi technology |
+| Not restricted to Wi-Fi technology | Restricted to Wi-Fi technology |
+| Responsible for creating 802.11 standard | Certifies products to meet 802.11 standard |
+
+### Q9. List down the type of Wi-Fi internet connectivity backhaul, share your home/college's wireless internet connectivity backhaul name and its properties.
+Backhaul is the network connection that connects Access Points to a larger network or the internet. There are various types of Wi-Fi Internet Connectivity Backhauls like :
+- Fiber Optics
+- MoCA (Multimedia over Coax Alliance)
+- Satellite
+- Cellular
+- Powerline
+
+Fiber Optics is the most popular type of backhaul used for domestic purposes. The physical medium being fiber optics, ensure that data is transferred in high speeds with minimal inteference as it uses light to transmit data through thin strands of glass or plastic fibers. It can cover large distances without signal degradation 
+
 ### Q10. List down the Wi-Fi topologies and use cases of each one.
+
+1. **Infrastructure Mode :** Infrastructure Mode, utilizing BSSs (Basic Service Sets) and ESSs (Extended Service Sets), is widely used in enterprises that deploy multiple Access Points throughout their offices or campuses to provide seamless coverage. 
+
+2. **Repeater Mode :** This topology uses network devices like mesh to extend the the coverage range of the main router. This topology is used in large home to extend Wi-Fi coverage from the main router in the main room to all other rooms.
+
+3. **Bridge Mode :** Two or more networks are connected wirelessly through an access point using this topology. One access point acts as the bridge, connecting the primary network with a remote network. This topology is used to connect two different networks in different buildings.
+
+4. **Ad-Hoc Mode :** In this topology, devices connect to each other without the use of a Access Point. Configuration of smart devices takes place using the Ad-Hoc mode.
+
+5. **Mobile Hotspot Mode :** In this topology, a mobile device providing internet connectivity acts as Wi-Fi hotspot
+
+6. **IoT Gateway Mode :** IoT Gateway Mode connects IoT devices to a network by acting as an intermediary between the devices and the internet. The IoT gateway connects to a local network and then sends or receives data from the cloud or client.
