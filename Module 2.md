@@ -36,9 +36,16 @@ The two tunnels in CAPWAP are:
 
 ### Q4. What is the difference between Lightweight APs and Cloud-based APs?
 
+| **Lightweight AP** | **Cloud Based AP**|
+|       :---:        |        :---:      |
+| Managed by a WLAN Controller (WLC) | Managed by a Cloud based Controller |
+| Requires a local physical controller to manage and configure APs | No need of on premise hardware as management and configuration of APs are done over cloud |
+| Scalability is dependent on capacity of WLC | Highly scalable since configuration of APs are completely remote |
+| Since WLC is local, network admins have more control over security | Security policies are managed through the cloud interface and enforced on the APs |
+| Costs are slightly higher than that of Cloud Based APs due to initial cost of WLC hardware | Lower initial costs but subscription-based recurring costs |
 
 ### Q5. How the CAPWAP tunnel is maintained between AP and controller?
-
+CAPWAP tunnel is maintained between AP and Controller by periodic exchange of packets to check the status of the tunnel. _Keepalive_ packets verify data tunnel's connectivity and _Echo_ packets verify control tunnel's connectivity. CAPWAP tunnels can be re-established in case of failure or connection teardown.
 
 ### Q6.What is the difference between Sniffer and monitor mode? Explain with use case for each mode.
 
