@@ -41,7 +41,7 @@ Modulation is the process of varying one or more properties of a carrier wave in
 Different modulation schemes are used depending on the data rate, range, and interference conditions, with each scheme offering a tradeoff between speed and reliability.
 
 ### Q4. What is the significance of OFDM in WLAN? How does it improve performance?
-
+OFDM stands for Orthogonal Frequency Divison Multiplexing which is a crucial technology which improves performance by dividing available bandwidths into subcarriers reducing inteference and enabling efficient data transfer. By dividing the available frequency spectrum into subcarriers, data transfer can be made less prone to noise as inteference in one subchannel will not affect the data in another subchannel. This contributes to better data transfer. 
 
 ### Q5. How are frequency bands divided for Wi-Fi? Explain different bands and their channels.
 
