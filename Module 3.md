@@ -69,7 +69,13 @@ There are two types of PPDU format namely Long Preamble PPDU and Short Preamble 
 * **PSDU (Physical Service Data Unit):** Contains actual data payload or content being transmitted.
   
 ### Q8. What is the difference between OFDM and OFDMA?
-
+|**`OFDM`**|**`OFDMA`**|
+|:---:|:---:|
+| Stands for Orthogonal Frequency Division Multiplexing | Stands for Orthogonal Frequency Division Multiple Access |
+| It is the modulation scheme for high speed data transmission ensuring high throughput | Multi-access method to allow multiple users to share the same frequency spectrum |
+| Used in point-to-point communication | Used for Multi User System |
+| Allocates all subcarriers to a single user at a time | Allocates different subcarriers to multiple users simultaneously |
+| One user uses all subcarriers | Different subcarriers are assigned to different users |
 
 ### Q9. What is the difference between MIMO and MU-MIMO?
 
