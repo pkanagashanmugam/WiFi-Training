@@ -45,15 +45,29 @@ OFDM stands for Orthogonal Frequency Divison Multiplexing which is a crucial tec
 
 ### Q5. How are frequency bands divided for Wi-Fi? Explain different bands and their channels.
 Wi-Fi primarily operates in 2 frequency bands :
-* **2.4 GHz :** This band has 14 channels out of which only 3 channels (Channels 1,6 and 11) are non-overlapping and suitable for data communication.Since it was the initially deployed frequency band, it faces inteference issues since it is heavily used by many devices. The Wi-Fi spectrum is 70 MHz wide.
-* **5 GHz :** This band operates on higher number of channels compared to the 2.4 GHz spectrum supporting almost upto 23 non-overlapping channels. 
+* **2.4 GHz :** This band has 14 channels out of which only 3 channels (Channels 1,6 and 11) are non-overlapping and suitable for data communication.Since it was the initially deployed frequency band, it faces inteference issues since it is heavily used by many devices. The Wi-Fi spectrum is 70 MHz wide and provides data rate upto 100 Mbps.
+* **5 GHz :** This band operates on higher number of channels compared to the 2.4 GHz spectrum supporting almost upto 23 non-overlapping channels. This spectrum is 500 MHz wide,providing maximum data rate of 1 Gbps and supports newer Wi-Fi standards.
+
+> Another important frequency band is the 6 GHz frequency band which provides more channels and lesser inteference. It is 1200 MHz wide and is accessible to new Wi-Fi 6E devices providing a maximum data rate of 2 Gbps. 
 
 ### Q6. What is the role of Guard Intervals in WLAN transmission? How does a short Guard Interval improve efficiency?
+Guard Interval is the time gap between two OFDM symbols to prevent interference (Inter-Symbol Inteference,ISI) due to multipath propagation.There are two types of Guard Intervals :
 
+- **Short Guard Interval (SGI)**: Reduces the time between transmissions, which improves efficiency by allowing more data to be transmitted in the same period.
+  
+- **Long Guard Interval (LGI)**: Ensures reliable data transfer but reduces throughput.
+> Different Wi-Fi standards use different Guard Intervals which are usually in the order of Micro Seconds.
 
 ### Q7. Describe the structure of an 802.11 PHY layer frame. What are its key components?
+There are two types of PPDU format namely Long Preamble PPDU and Short Preamble PPDU but the general format of the PHY layer frame is :
 
+| **PREAMBLE** |**HEADER**|**PSDU**|
+| :---:|:---:|:---:|
 
+* **PREAMBLE :** Consists of a sequence of bits transmitted before the actual data, used for synchronization between the transmitter and receiver.
+* **HEADER :** Contains information about the frame, such as modulation type, data rate, and frame length.
+* **PSDU (Physical Service Data Unit):** Contains actual data payload or content being transmitted.
+  
 ### Q8. What is the difference between OFDM and OFDMA?
 
 
@@ -67,3 +81,12 @@ Wi-Fi primarily operates in 2 frequency bands :
 
 
 ### Q12. How is the data rate calculated?
+Data Rate is calculated using the formula :
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Number of Sub Carriers) x (Number of Coded Bits per Sub Carrier) x (Coding) x (Number of Spatial Streams) 
+
+**Data Rate** =_________________________________________________________________________________________________________________
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(OFDM Symbol Duration) + (Guard Interval Duration)
+
+[The MCS Index Table](https://mcsindex.com/) can be used to verify the data rates.
