@@ -22,7 +22,11 @@ There are various PHY layer standards that 802.11 covers.
 - **QAM - Quadrature Amplitude Modulation** : A modulation technique which combines Amplitude Modulation and Phase Shift Keying to transmit data.
   
 ### Q2. What are DSSS and FHSS? How do they work?
+DSSS and FHSS are spread spectrum modulation techniques which deals with how signals are spread over a frequency domain. 
 
+- **DSSS :** Direct Sequence Spread Spectrum is a technique where data signal is spread over a wide frequency band. The original data signal is multiplied by a pseudorandom noise sequence, which is a series of binary digits. The resultant spread signal is transmitted over air.
+
+- **FHSS :** Frequency Hopping Spread Spectrum is another Spread Spectrum technique which works by rapidly changing the transmission frequency between hops according to a predefined hopping pattern. The transmitter and receiver are synchronized on the hopping pattern to ensure that the communication is not lost.
 
 ### Q3. How do modulation schemes work in the PHY layer? Compare different modulation schemes and their performance across various Wi-Fi standards.
 
