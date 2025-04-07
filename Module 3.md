@@ -44,7 +44,9 @@ Different modulation schemes are used depending on the data rate, range, and int
 OFDM stands for Orthogonal Frequency Divison Multiplexing which is a crucial technology which improves performance by dividing available bandwidths into subcarriers reducing inteference and enabling efficient data transfer. By dividing the available frequency spectrum into subcarriers, data transfer can be made less prone to noise as inteference in one subchannel will not affect the data in another subchannel. This contributes to better data transfer. 
 
 ### Q5. How are frequency bands divided for Wi-Fi? Explain different bands and their channels.
-
+Wi-Fi primarily operates in 2 frequency bands :
+* **2.4 GHz :** This band has 14 channels out of which only 3 channels (Channels 1,6 and 11) are non-overlapping and suitable for data communication.Since it was the initially deployed frequency band, it faces inteference issues since it is heavily used by many devices. The Wi-Fi spectrum is 70 MHz wide.
+* **5 GHz :** This band operates on higher number of channels compared to the 2.4 GHz spectrum supporting almost upto 23 non-overlapping channels. 
 
 ### Q6. What is the role of Guard Intervals in WLAN transmission? How does a short Guard Interval improve efficiency?
 
