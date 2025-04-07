@@ -12,6 +12,7 @@ There are various PHY layer standards that 802.11 covers.
 |   802.11n    |    OFDM (BPSK,QPSK,16-QAM,64-QAM)   | 2.4 GHz and 5 GHz | 600 Mbps (MIMO upto 4 spatial streams |
 |   802.11ac    |    OFDM (BPSK,QPSK,16-QAM,64-QAM)   | 5 GHz | 6.93 Gbps (MIMO,MU-MIMO upto 8 spatial streams |
 
+> NOTE: 
 - **DSSS - Direct Sequence Spread Spectrum** : A technique where data is transmitted over a wide frequency band by spreading it across multiple frequencies. 
 - **FSSS - Frequency Hopping Spread Spectrum** : A method where the transmitter and receiver hop between different frequencies in a predetermined pattern
 - **MIMO - Multiple Input Multiple Output** : Uses multiple antennas to send and receive data simultaneously, allowing for higher throughput.
@@ -94,7 +95,42 @@ There are two types of PPDU format namely Long Preamble PPDU and Short Preamble 
 - **PMD :** The Physical Medium Dependent layer is responsible for defining the details of transmitting and receiving data bits over a physical medium
 
 ### Q11. What are the types of PPDU? Explain the PPDU frame format across different Wi-Fi generations.
+There are two types of PPDU, namely :
+- Long Preamble PPDU
+- Short Preamble PPDU
 
+The PPDU frame formats across Wi-Fi generations are :
+1. **802.11b :**
+
+| **SYNC** |**SFD**|**SIGNAL**|**SERVICE**|**LENGTH**|**CRC**|**PSDU**|
+| :---:|:---:|:---:| :---:|:---:|:---:|:---:|
+| (128 or 56 bits) Used for synchronization | (16 bits) Marks the start of frame | (8 bits) Mentions the data rate | (8 bits) Reserved for future purposes | (8 bits) Contains the frame length | (8 bits) Error detection technique | Payload/Data |
+
+2. **802.11a/g :**
+
+| **SFT** |**LFT**|**RATE**|**LENGTH**|**PARITY**|**TAIL**|**PSDU**|
+| :---:|:---:|:---:| :---:|:---:|:---:|:---:|
+| Short Training Field used for time synchronization | Long Training Field used for channel estimation | Modulation Scheme is specified | Contains the frame length | Error detection bit | Ensures signal Integrity | Payload/Data |
+
+3. **802.11n :**
+
+| **HT SIG1** | **HT STF** |**HT LTF**|**HT SIG2**|**SERVICE**|**LENGTH**| **TAIL** |**CRC**|**PSDU**|
+| :---:|:---:|:---:| :---:|:---:|:---:|:---:|:---:|:---:|
+
+There are three variations to the 802.11n frame format. Above frame format is the base frame format and additionally, Legacy Preamble may be added to support backward compatibility with 802.11a/g standards. 
+
+4. **802.11ac :**
+
+| **L-SFT** |**L-LFT**|**L-SIG**| **VHT SIG-A1**| **VHT SIG-A2** | **VHT STF** |**VHT LTF**|**VHT SIG-B**|**SERVICE**|**LENGTH**| **TAIL** |**CRC**|**PSDU**|
+| :---:| :---:|:---:| :---:| :---:|:---:|:---:| :---:|:---:|:---:|:---:|:---:|:---:|
+
+The 802.11ac frame format includes components such as L-SFT, L-LFT, and VHT SIG, designed to enhance throughput with higher data rates using Very High Throughput (VHT) features.
+5. **802.11ax :**
+
+| **L-SFT** |**L-LFT**|**L-SIG**| **HE SIG-A**| **HE SIG-B** | **HE STF** |**HE LTF**|**SERVICE**|**LENGTH**| **TAIL** |**CRC**|**PSDU**|
+| :---:| :---:|:---:| :---:| :---:|:---:|:---:| :---:|:---:|:---:|:---:|:---:|
+
+The 802.11ax frame format introduces HE (High Efficiency) features like HE SIG and HE LTF, optimizing performance in dense environments, improving spectrum efficiency, and supporting MU-MIMO.
 
 ### Q12. How is the data rate calculated?
 Data Rate is calculated using the formula :
