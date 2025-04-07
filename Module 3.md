@@ -78,10 +78,20 @@ There are two types of PPDU format namely Long Preamble PPDU and Short Preamble 
 | One user uses all subcarriers | Different subcarriers are assigned to different users |
 
 ### Q9. What is the difference between MIMO and MU-MIMO?
-
+|**`MIMO`**|**`MU-MIMO`**|
+|:---:|:---:|
+| Stands for Multiple Input Multiple Output | Stands for Multi User Multiple Input Multiple Output |
+| Improves throughput of a single user | Improves throughput of the network |
+| Uses multiple antennas to send and receive data streams pertaining a single device | Uses multiple antennas to send and receive data streams pertaining to multiple devices |
+| Single device receives multiple data streams | Multiple devices receive multiple data streams |
+| Only one device can use the channel at a time, reducing overall system efficiency | Multiple devices can use the channel at a time, increasing overall system efficiency |
 
 ### Q10. What are PPDU, PLCP, and PMD in the PHY layer?
+- **PPDU :** The PHY Protocol Data Unit is the packet format transmitted over the wireless medium, containing preamble and data fields. The frame format of PPDU can vary over Wi-Fi generations but it contains three main fields namely Preamble, Header and PSDU. It adds or removes the Preamble and Header in the sender or receiver side respectively.
 
+- **PLCP :** The Physical Layer Convergence Protocol acts as an interface between the PHY and MAC layers. It maps MPDUs into a frame format suitable for transmission by the Physical Medium Dependent (PMD) sublayer.
+
+- **PMD :** The Physical Medium Dependent layer is responsible for defining the details of transmitting and receiving data bits over a physical medium
 
 ### Q11. What are the types of PPDU? Explain the PPDU frame format across different Wi-Fi generations.
 
