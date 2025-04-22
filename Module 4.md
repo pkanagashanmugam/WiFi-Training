@@ -76,12 +76,12 @@ The EAPOL 4-way handshake is a secure method of establishing a connection betwee
  - Message 4 : The client sends back a final message to acknowledge that the process is complete.
 
 ### Q7. Describe the power saving scheme in MAC layer and explore on the types of Power saving mechanisms
-
+Power Management is one of the important functionalities of MAC layer so much so that it the MAC layer frame format contains a bit in the Frame Control field of the MAC header which is used to denote Power Management. If that bit is set to 1, it signals the station is actively power-saving by switching some transceivers. The power management bit along with Traffic Indication Map in beacon frames is used to manage traffic.
 
 ### Q8. Describe the Medium Access Control methodologies
 
 
 ### Q9. Brief about the Block ACK mechanism and its advantages
-
+Block ACK is a mechanism where acknowledgement to multiple frames are given at a time. This is a very efficient mechanism that is popularly used. Block ACK is used during aggregation. The transmitter initates the process by sending Add Block Ack(ADDBA) to find out if receiver supports Block ACK and it receives an acknowledgement from the receiver. After transmitting the data, the transmitter asks for Block ACK with a request and it sends an acknowledgement. This session can be deleted by sending Delete Block Ack(DELBA) by the transmitter. The two types of Block ACK are Immediate BLOCK ACK and Delayed BLOCK ACK.
 
 ### Q10. Explain about A-MSDU, A-MPDU and A-MSDU in A-MPDU
