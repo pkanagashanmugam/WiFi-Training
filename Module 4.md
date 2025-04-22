@@ -1,14 +1,72 @@
 # Module 4 - WLAN MAC Layer
 
 ### Q1. What is the significance of MAC layer and in which position it is placed in the OSI model
+MAC layer corresponds to the second layer of the OSI model which plays a vital role in managing access to the medium(wireless in this case),ensuring there is no collision and is responsible for converting message into MAC frame before sending it to the physical layer and at the opposite side, it ensures that message is reconstructed and is sent to L3. On a broader context, it manages three planes namely Management Plane, Control Plane and Data Plane.
 
-### Q2. Describe the frame format of the 802.11 MAC header and explain the purpose of each fields
+### Q2. Describe the frame format of the 802.11 MAC header and explain the purpose of each fields.
+Below is the frame format for 802.11 MAC header which consists of various fields and sub fields each adding information to the packet.
+```
++----------------------+-----------------------+-----------------------+
+|      MAC HEADER      |       FRAME BODY      |  FRAME CHECK SEQUENCE |
++----------------------+-----------------------+-----------------------+
+```
+- **MAC HEADER :**
+It consists of 9 fields which incorporate information like Destination Address, Data, CRC and most important of all, Frame Control which by itself consists of various information like the protocol version, type of function(management/data or control), subtype, security standard, power management and many more.
 
-### Q3. Please list all the MAC layer functionalities in all Management, Control and Data plane
+- **FRAME BODY :**
+Frame body consists of the actual data that is being transmitted over the Wireless Network.
+- **FCS :**
+Frame Check Sequence is responsible to check the integrity of the message and whether it has been received without any transmission errors.
 
+### Q3. Please list all the MAC layer functionalities in all Management, Control and Data plane.
+**MANAGEMENT PLANE :** 
+
+The management plane is responsible for establishing and maintaining connection between wireless devices and help stations and access points Associate and maintaing connectivity. The various functionalities of Management Plane are :
+
+  • Advertise Capabilities
+  
+  • Connection Management
+  
+  • Security Management
+  
+  • Mobility Management
+  
+  • Load Management
+  
+  • Power Management
+  
+  • QoS Management
+  
+  • Channel Management
+  
+  • Multiple Access Management
+
+**CONTROL PLANE :**
+
+Once connection has been established, the control plane ensures that the connectivity between the devices is secure and the transmission of data between them are smooth. The main functionalities of the Control Plane are:
+
+  • Flow Control
+  
+  • Power Save Control
+  
+  • Medium Access Control
+
+**DATA PLANE :**
+
+Data Plane is responsible for actual transfer of data between the wireless devices connected its primary functionality is Data Transmission.
 ### Q4. Explain the scanning process and its types in detail
+Scanning is the primary operation that takes place between the Station and the Access Point before association. There are two types of scanning namely : Active scanning and Passive scanning.
 
-### Q5. Brief about the client association process
+**ACTIVE SCANNING :**
+
+This is the type of scanning in which the Station that needs to connect to a wireless networks, sends out a Probe Request as a broadcast message in all the channels. When an AP receives a Probe Request, it sends out a Probe Resposne which contains all the capabilities of the Access Point. The Client receives this Response message from one or more AP(s) and decides which AP to connect to and later sends out Authentication Request and other subsequent frames for association.
+
+**PASSIVE SCANNING :**
+
+This is the type of scanning in which an AP periodically sends out a Becaon frame which consists of the capabilities of the AP. The station which intends to connect to the wireless network, listens to the Beacon frame it receives from all the APs and decides upon which AP to connect to.
+
+### Q5. Brief about the client association process.
+The first step of Client Association Process is scanning which is explained above. Once the station chooses which AP to connect to, it sends Probe Request and receives Probe Response from the AP. Once it receives the probe response, it checks the compatibility between AP and Station and sends out a Authentication Request. The AP respods with an Authentication Response which marks end of Authentication and start of Association. The Station and AP exchange Association requests and responses before Station starts to exchange data with AP.
 
 ### Q6. Explain each steps involved in EAPOL 4-way handshake and the purpose of each keys derived from the process
 
