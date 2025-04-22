@@ -79,9 +79,22 @@ The EAPOL 4-way handshake is a secure method of establishing a connection betwee
 Power Management is one of the important functionalities of MAC layer so much so that it the MAC layer frame format contains a bit in the Frame Control field of the MAC header which is used to denote Power Management. If that bit is set to 1, it signals the station is actively power-saving by switching some transceivers. The power management bit along with Traffic Indication Map in beacon frames is used to manage traffic.
 
 ### Q8. Describe the Medium Access Control methodologies
+Main functionality of the Medium Access Control is to control the medium of communication which it does by the following methods:
+1. **Point Co-ordination Function :**
+The PCF allows users to transmit by granting access to the Stations by polling them. By reserving the medium, AP ensures that Stations cannot transmit data unless polled by the AP. The stations are polled in a Round Robin method.
 
+2. **Distributed Co-ordination Function :**
+DCF is a hybrid methodology which uses PCF with distributed control. In this method, everyone including the Access Point are considered as participants contending for the wireless medium. It operates based on CSMA/CA mechanism where data is transmitted when a participant senses a medium to be idle. If a collision takes place, the station waits for particular amount of time called `backoff` before retransmitting the same signal. 
+
+3. **Enhanced Distribution Channel Access :**
+EDCA is QoS enhanced DCF where in traffic priority is given to stations contending for medium access. By taking various parameters into consideration, traffic is transmitted into seperate queues in the Radio Hardware.
 
 ### Q9. Brief about the Block ACK mechanism and its advantages
 Block ACK is a mechanism where acknowledgement to multiple frames are given at a time. This is a very efficient mechanism that is popularly used. Block ACK is used during aggregation. The transmitter initates the process by sending Add Block Ack(ADDBA) to find out if receiver supports Block ACK and it receives an acknowledgement from the receiver. After transmitting the data, the transmitter asks for Block ACK with a request and it sends an acknowledgement. This session can be deleted by sending Delete Block Ack(DELBA) by the transmitter. The two types of Block ACK are Immediate BLOCK ACK and Delayed BLOCK ACK.
 
 ### Q10. Explain about A-MSDU, A-MPDU and A-MSDU in A-MPDU
+A-MSDU stands for Aggregate MAC Service Data Unit which is aggregation of two or more MSDU. MSDUs are data packet which are received by the MAC layer from the layers above it. 
+
+A-MPDU stands for Aggregate MAC Protocol Data Unit which is aggregation of two or more MPDU. MPDUs are data packets which are received by the physical layer from the MAC layer. Multiple MPDUs are aggregated together which is transmitted with a PHY header by the radio.
+
+A-MSDU in A-MPDU refers to a scenario where multiple A-MSDUs are bundled together to create an A-MPDU. This approach can be beneficial for scenarios where there are many smaller MSDUs to transmit, allowing for further aggregation and overhead reduction.
