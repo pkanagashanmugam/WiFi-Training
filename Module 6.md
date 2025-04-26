@@ -1,4 +1,4 @@
-# Module 6 - Advanced Features and Standard Extensions
+# Module 6 - Security in Wi-Fi
 
 ### Q1. What are the pillars of Wi-Fi security?
 ### Q2. Explain the difference between authentication and encryption in WiFi security.
