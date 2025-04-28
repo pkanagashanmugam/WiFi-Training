@@ -41,6 +41,10 @@ Both 802.11k and 802.11v are IEEE standards designed to enhance Wi-Fi client roa
 
 - 802.11v allows the network to proactively assist the client in making roaming decisions. It introduces BSS Transition Management, enabling the AP to suggest better candidate APs based on signal quality, AP load, or network policy. Although the final decision to roam rests with the client, 802.11v ensures that the client has the necessary guidance to make an optimal choice.
 ### Q9. Explain the concept of Fast BSS Transition (802.11r) and its benefit in mobile environments.
-
+802.11r is a Wi-Fi standard designed to reduce the time taken by a client to switch between APs with its applications concentrated to VoIP, Video calls and Video streaming. When a client connects to a Wireless Network, it goes through a series of authentication steps and 4 way handshake. When a client initially connects to an AP, it undergoes a 4 way handshake but each time it roams and connects to a new AP, it needs to undergo the same series of steps. 802.11r reduces this time by sharing the information it used to connect to the client to the neighboring APs. This allows the client to switch instantly.
 
 ### Q10. How do 802.11k/v/r work together to provide seamless roaming in enterprise networks?
+802.11k, 802.11v and 802.11r work hand in hand to porovide seamless roaming for Wi-Fi devices ensuring that handoff between two clients are smooth.
+- 802.11k provides neighbour reports giving the client information about nearby APs.
+- 802.11v guides the client by suggesting the most optimal AP based on its capabilities advertised.
+- While 802.11k and 802.11v allows a client to choose the best nearby AP, 802.11r standard ensures that the time taken for handoff is very short by pre authenticating devices to APs.
