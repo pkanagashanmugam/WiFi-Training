@@ -35,8 +35,11 @@ It allows use of multiple frequency band for the first time in Wi-Fi technology,
 Earlier, even though the Wi-Fi standards use multiple frequency bands, the Wi-Fi device is allowed to connect only to one of the available frequency bands. With Multi Link Operation, Wi-Fi connected devices can now aggregate multiple links to transmit and receive data in parallel. Aggregation allows the throughput to increase and dynamic selection of these links will ensure that devices face much lower latency
 
 ### Q8. What is the purpose of 802.11k and v, and how does it aid in roaming?
+Both 802.11k and 802.11v are IEEE standards designed to enhance Wi-Fi client roaming, particularly in networks with multiple access points (APs), such as enterprise or mesh environments.
 
+- 802.11k helps a client device find the best available AP to roam to by providing information about the surrounding network. When roaming conditions are detected, the current AP responds to a neighbor report request from the client with a list of nearby APs and their details (e.g., channel, signal strength). This allows the client to quickly scan only relevant channels rather than the entire spectrum, reducing roaming time and improving connection stability.
 
+- 802.11v allows the network to proactively assist the client in making roaming decisions. It introduces BSS Transition Management, enabling the AP to suggest better candidate APs based on signal quality, AP load, or network policy. Although the final decision to roam rests with the client, 802.11v ensures that the client has the necessary guidance to make an optimal choice.
 ### Q9. Explain the concept of Fast BSS Transition (802.11r) and its benefit in mobile environments.
 
 
